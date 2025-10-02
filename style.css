@@ -1,0 +1,242 @@
+:root {
+  --accent: #c62828;
+  --dark: #222;
+  --muted: #777;
+  --bg: #f8f8f8;
+  --card: #fff;
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+.topbar {
+  background: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pesquisa input {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 250px;
+}
+
+.top-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 6px;
+}
+
+.restaurante-card {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin: 20px auto;
+  max-width: 900px;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.restaurante-card img {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.categorias a {
+  text-decoration: none;
+  background: #fff;
+  color: var(--dark);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.categorias a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.section-categoria {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
+}
+
+/* Título da categoria */
+.section-categoria h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+  margin: 30px 0 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Grade dos produtos */
+.section-categoria .lista-produto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.produto {
+  background: var(--card);
+  display: flex;
+  gap: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.produto img {
+  width: 180px;
+  height: 130px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.detalhes h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.detalhes p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.preco {
+  color: var(--accent);
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .restaurante-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  .restaurante-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-categoria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .produto {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .produto img {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .topbar .container {
+    flex-wrap: nowrap;
+  }
+
+  .category-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .produto {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .produto img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .preco {
+    font-size: 16px;
+  }
+}
