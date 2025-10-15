@@ -1,65 +1,49 @@
-<<<<<<< HEAD
-/* Reset Básico para remover margens e paddings padrão do navegador */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo e Fonte Base */
 body {
-  font-family: sans-serif; /* Use a fonte real da imagem aqui */
-  background-color: #f0f0f0; /* Cor de fundo da página */
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Container principal para centralizar o conteúdo */
 .container {
   width: 90%;
-
-  margin: 0 auto;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* -------------------
-   1. Barra de Navegação (Top Bar)
-   ------------------- */
-
-.top-bar {
+.barra-superior {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navegação Principal (Logo e Links) */
-.nav-content {
+.conteudo-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  /* Linha verde por baixo da navegação */
-  border-bottom: 5px solid #66bb6a; /* Cor verde aproximada */
+  border-bottom: 5px solid #66bb6a;
 }
 
-.logo p {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #333;
-  /* Estilo de "botton" da logo */
-  border: 1px solid #ccc;
+.logo img {
   border-radius: 50%;
-  padding: 5px;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 1;
 }
 
-.main-nav ul {
+.navegacao-principal ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.main-nav a {
+.navegacao-principal a {
   text-decoration: none;
   color: #555;
   font-size: 0.9em;
@@ -67,30 +51,11 @@ body {
   align-items: center;
 }
 
-.main-nav a .icon {
+.navegacao-principal a .icon {
   margin-right: 5px;
 }
 
-/* Navegação Secundária (Home, Desktop) */
-.secondary-nav {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.secondary-nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  font-size: 0.85em;
-  color: #777;
-}
-
-/* -------------------
-   2. Seção de Destaque (Hero Section)
-   ------------------- */
-
-.hero-section {
+.secao-destaque {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,218 +66,151 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.hero-text {
+.texto-destaque {
   max-width: 50%;
 }
 
-.hero-text h1 {
+.texto-destaque h1 {
   font-size: 2.5em;
   font-weight: 700;
   color: #333;
   margin-bottom: 15px;
-  /* Estilo para a palavra "bottons especiais" em negrito */
 }
 
-.hero-text p {
+.texto-destaque p {
   font-size: 1.1em;
   color: #666;
 }
 
-.hero-image {
+.imagem-destaque {
   width: 250px;
   height: 150px;
-  background-color: #ccc; /* Placeholder para a imagem do botton */
+  background-color: #ccc;
   border-radius: 10px;
-  /* Ajuste para simular o visual da imagem do botton com sombra */
   border: 1px solid #aaa;
   position: relative;
-  /* Você usaria aqui uma imagem de fundo ou tag <img> */
 }
 
-/* -------------------
-   3. Cards de Conteúdo
-   ------------------- */
-
-.content-cards {
+.cartoes-conteudo {
   display: grid;
-  /* Cria 3 colunas de tamanhos iguais */
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 30px 0;
 }
 
-.card {
+.cartao-pronta-entrega,
+.cartao-conscientizacao,
+.cartao-arte-personalizada {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  min-height: 350px; /* Para dar uma altura visual similar */
+  min-height: 350px;
   display: flex;
   flex-direction: column;
 }
 
-.card h2 {
+.cartao-pronta-entrega h2,
+.cartao-conscientizacao h2,
+.cartao-arte-personalizada h2 {
   font-size: 1.2em;
   color: #333;
   margin-bottom: 10px;
 }
 
-.card p {
+.cartao-pronta-entrega p,
+.cartao-conscientizacao p,
+.cartao-arte-personalizada p {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 15px;
 }
 
-.card-image-area {
-  flex-grow: 1; /* Faz a área da imagem ocupar o espaço restante */
-  background-color: #ddd; /* Placeholder para as imagens */
+.area-imagem-cartao {
+  flex-grow: 1;
+  background-color: #ddd;
   border-radius: 5px;
-  /* Estilos específicos para cada card (cores de fundo aproximadas) */
 }
 
-/* Card 1: Bottons a pronta entrega - Fundo cinza */
-.ready-delivery-card .card-image-area {
+.cartao-pronta-entrega .area-imagem-cartao {
   background-color: #d8d8d8;
 }
 
-/* Card 2: Bottons de conscientização - Fundo branco */
-.awareness-card .card-image-area {
+.cartao-conscientizacao .area-imagem-cartao {
   background-color: #f7f7f7;
 }
 
-/* Card 3: Sua arte personalizada - Fundo verde claro */
-.custom-art-card .card-image-area {
+.cartao-arte-personalizada .area-imagem-cartao {
   background-color: #e5f5e5;
 }
 
-/* Media Query para responsividade (opcional, mas recomendado) */
-@media (max-width: 768px) {
-  .nav-content {
-    flex-direction: column;
-  }
-  .main-nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-text {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-  .content-cards {
-    /* Muda para 1 coluna em telas menores */
-    grid-template-columns: 1fr;
-  }
+.secao-quem-somos {
+  margin-bottom: 40px;
 }
 
-/* Reset Básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo e Fonte Base */
-body {
-  font-family: sans-serif; /* Use a fonte real da imagem aqui */
-  background-color: #f7f7f7; /* Fundo levemente cinza */
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Container principal para centralizar o conteúdo */
-.container {
-  width: 90%;
-
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/* -------------------
-   1. SEÇÃO QUEM SOMOS NÓS
-   ------------------- */
-
-.main-title {
+.titulo-principal {
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 5px;
+  text-align: center;
 }
 
-.subtitle {
+.subtitulo {
   font-size: 1em;
   color: #666;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.history-content {
+.conteudo-historia {
   display: flex;
   gap: 30px;
 }
 
-.logo-image {
-  /* Simulação da imagem do botton */
+.area-logo .imagem-logo {
   width: 70px;
   height: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f0f0f0;
-  /* Adicione a imagem real como background-image ou use a tag <img> no HTML */
 }
 
-.text-area {
+.area-texto {
   font-size: 0.9em;
 }
 
-.text-area p {
+.area-texto p {
   margin-bottom: 15px;
   text-align: justify;
 }
 
-.text-area strong {
-  font-weight: bold;
-}
-
-/* Estilo para o parágrafo final, ligeiramente destacado */
-.highlight-text {
+.texto-destaque {
   padding-top: 15px;
   border-top: 1px solid #eee;
   margin-top: 15px !important;
 }
 
-/* -------------------
-   2. SEÇÃO REDES SOCIAIS
-   ------------------- */
-
-.social-media-section {
+.secao-redes-sociais {
   margin-top: 50px;
   padding-top: 30px;
   border-top: 1px solid #eee;
 }
 
-.social-title {
+.titulo-redes {
   font-size: 1.5em;
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.social-cards {
+.cartoes-redes {
   display: grid;
-  /* 3 colunas iguais */
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.social-card {
-  display: block; /* Para que o link ocupe todo o espaço do card */
+.cartao-rede {
+  display: block;
   text-decoration: none;
   background-color: #fff;
   padding: 25px;
@@ -320,27 +218,27 @@ body {
   border-radius: 5px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
-  min-height: 180px; /* Garante altura mínima uniforme */
+  min-height: 180px;
 }
 
-.social-card:hover {
+.cartao-rede:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-.social-card h3 {
+.cartao-rede h3 {
   font-size: 1.1em;
   margin-bottom: 5px;
   color: #333;
 }
 
-.social-card p {
+.cartao-rede p {
   font-size: 0.85em;
   color: #666;
   margin-bottom: 20px;
 }
 
-.icon-circle {
+.icone-circulo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -352,13 +250,11 @@ body {
   color: white;
 }
 
-/* Cores dos Ícones */
-.whatsapp-color {
-  background-color: #25d366; /* Verde do WhatsApp */
+.cor-whatsapp {
+  background-color: #25d366;
 }
 
-.instagram-color {
-  /* Simulação de gradiente ou cor destacada do Instagram */
+.cor-instagram {
   background: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -369,173 +265,40 @@ body {
   );
 }
 
-.shop-color {
-  background-color: #ee4d2d; /* Laranja da Shopee (ou similar) */
+.cor-email {
+  background-color: #4a90e2;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
-
-  .history-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .social-cards {
-    /* Muda para 1 coluna em telas muito pequenas */
-    grid-template-columns: 1fr;
-  }
+.cor-loja {
+  background-color: #ee4d2d;
 }
 
-/* --- Media Queries para responsividade da Página de Catálogo --- */
-
-/* Telas menores que 1024px (Tablets em modo paisagem) */
-@media (max-width: 1024px) {
-  .content-cards {
-    /* Muda de 3 para 2 colunas */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .hero-section {
-    padding: 30px;
-  }
+.secao-contato {
+  margin-bottom: 40px;
 }
 
-/* Telas menores que 768px (Tablets e Celulares) */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-
-  /* Navegação Principal */
-  .nav-content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 15px;
-  }
-
-  .main-nav ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 15px 10px; /* Reduz espaço entre os links */
-    margin-top: 10px;
-  }
-
-  /* Seção de Destaque (Hero) */
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    max-width: 100%;
-    margin-bottom: 25px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8em;
-  }
-
-  .hero-image {
-    width: 200px;
-    height: 120px;
-  }
-
-  /* Cards de Conteúdo */
-  .content-cards {
-    /* Volta para 1 coluna */
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: auto;
-  }
-}
-
-/* Telas muito pequenas (Celulares) */
-@media (max-width: 480px) {
-  .main-nav a {
-    font-size: 0.8em;
-  }
-
-  .logo p {
-    width: 50px;
-    height: 50px;
-    font-size: 1em;
-  }
-}
-
-/* Reset Básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo e Fonte Base */
-body {
-  font-family: sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Container principal (o mesmo estilo do "Quem Somos Nós") */
-.container {
-  width: 90%;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-/* -------------------
-   1. SEÇÃO DE CONTATO E FORMULÁRIO
-   ------------------- */
-
-.main-title {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 1em;
-  color: #666;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.contact-form {
+.formulario-contato {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0 20px; /* Um pequeno padding para não grudar nas bordas */
+  padding: 0 20px;
 }
 
-.form-group {
+.grupo-formulario {
   display: flex;
   flex-direction: column;
 }
 
-.form-group label {
+.grupo-formulario label {
   font-weight: bold;
   margin-bottom: 5px;
   color: #555;
   font-size: 0.9em;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+.grupo-formulario input[type="text"],
+.grupo-formulario input[type="email"],
+.grupo-formulario textarea {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -543,14 +306,14 @@ body {
   transition: border-color 0.3s;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #66bb6a; /* Cor de destaque (verde) */
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+  border-color: #66bb6a;
   outline: none;
 }
 
-.submit-button {
-  background-color: #66bb6a; /* Cor verde de destaque */
+.botao-enviar {
+  background-color: #66bb6a;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -562,331 +325,39 @@ body {
   font-weight: bold;
 }
 
-.submit-button:hover {
+.botao-enviar:hover {
   background-color: #5cb860;
 }
 
-/* -------------------
-   2. SEÇÃO REDES SOCIAIS (Reutilizando estilos)
-   ------------------- */
-
-.social-media-section {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid #eee;
-}
-
-.social-title {
-  font-size: 1.5em;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.social-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.social-card {
-  display: block;
-  text-decoration: none;
-  background-color: #fff;
-  padding: 25px 15px; /* Ajuste para caber em 3 colunas */
-  border: 1px solid #eee;
-  border-radius: 5px;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  min-height: 180px;
-}
-
-.social-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-/* Ícones e Cores */
-.icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-  color: white;
-}
-
-.whatsapp-color {
-  background-color: #25d366;
-}
-.instagram-color {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-}
-.email-color {
-  background-color: #4a90e2;
-} /* Azul para o e-mail */
-
-/* Responsividade */
 @media (max-width: 768px) {
-  .container {
-    padding: 20px;
+  .conteudo-nav {
+    flex-direction: column;
   }
-
-  .contact-form {
-    padding: 0;
+  .navegacao-principal ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
   }
-
-  .social-cards {
-    grid-template-columns: 1fr; /* 1 coluna em telas menores */
-=======
-:root {
-  --accent: #c62828;
-  --dark: #222;
-  --muted: #777;
-  --bg: #f8f8f8;
-  --card: #fff;
-  --radius: 12px;
-  --shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--dark);
-}
-
-.topbar {
-  background: #fff;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.topbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-}
-
-.brand {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.muted {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.pesquisa input {
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid #ccc;
-  width: 100%;
-  max-width: 250px;
-}
-
-.top-actions button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 15px;
-  margin-left: 6px;
-}
-
-.restaurante-card {
-  background: var(--card);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  margin: 20px auto;
-  max-width: 900px;
-  display: flex;
-  gap: 15px;
-  padding: 15px;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
-
-.restaurante-card img {
-  width: 160px;
-  height: 160px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.categorias {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-  padding: 0 10px;
-}
-
-.categorias a {
-  text-decoration: none;
-  background: #fff;
-  color: var(--dark);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  box-shadow: var(--shadow);
-  transition: 0.2s;
-}
-
-.categorias a:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
-.menu {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
-}
-
-.section-categoria {
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  padding: 0 16px;
-}
-
-.section-categoria h2 {
-  border-left: 5px solid var(--accent);
-  padding-left: 10px;
-  margin: 30px 0 20px;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.section-categoria .lista-produto {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.produto {
-  background: var(--card);
-  display: flex;
-  gap: 15px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 10px;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
-
-.produto img {
-  width: 180px;
-  height: 130px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.detalhes h3 {
-  margin: 0;
-  font-size: 17px;
-}
-
-.detalhes p {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.preco {
-  color: var(--accent);
-  font-weight: bold;
-  display: block;
-  margin-top: 5px;
-  font-size: 15px;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  .restaurante-card {
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-  }
-
-  .restaurante-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .section-categoria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .produto {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .produto img {
-    width: 120px;
-    height: 100px;
-  }
-}
-
-@media (min-width: 1080px) {
-  .topbar .container {
-    flex-wrap: nowrap;
-  }
-
-  .category-section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .produto {
+  .secao-destaque {
     flex-direction: column;
     text-align: center;
+  }
+  .texto-destaque {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .cartoes-conteudo,
+  .cartoes-redes {
+    grid-template-columns: 1fr;
+  }
+  .conteudo-historia {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 20px;
   }
-
-  .produto img {
-    width: 200px;
-    height: 150px;
-  }
-
-  .preco {
-    font-size: 16px;
->>>>>>> 2b7a990be3382afcaf0df195ab54aa813d7ae6ed
+  .formulario-contato {
+    padding: 0;
   }
 }
