@@ -1,0 +1,651 @@
+/* Reset Básico para remover margens e paddings padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e Fonte Base */
+body {
+  font-family: sans-serif; /* Use a fonte real da imagem aqui */
+  background-color: #f0f0f0; /* Cor de fundo da página */
+  line-height: 1.6;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+/* -------------------
+   1. Barra de Navegação (Top Bar)
+   ------------------- */
+
+.top-bar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navegação Principal (Logo e Links) */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  /* Linha verde por baixo da navegação */
+  border-bottom: 5px solid #66bb6a; /* Cor verde aproximada */
+}
+
+.logo p {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  /* Estilo de "botton" da logo */
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 1;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav a .icon {
+  margin-right: 5px;
+}
+
+/* Navegação Secundária (Home, Desktop) */
+.secondary-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.secondary-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.85em;
+  color: #777;
+}
+
+/* -------------------
+   2. Seção de Destaque (Hero Section)
+   ------------------- */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  /* Estilo para a palavra "bottons especiais" em negrito */
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.hero-image {
+  width: 250px;
+  height: 150px;
+  background-color: #ccc; /* Placeholder para a imagem do botton */
+  border-radius: 10px;
+  /* Ajuste para simular o visual da imagem do botton com sombra */
+  border: 1px solid #aaa;
+  position: relative;
+  /* Você usaria aqui uma imagem de fundo ou tag <img> */
+}
+
+/* -------------------
+   3. Cards de Conteúdo
+   ------------------- */
+
+.content-cards {
+  display: grid;
+  /* Cria 3 colunas de tamanhos iguais */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 350px; /* Para dar uma altura visual similar */
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card-image-area {
+  flex-grow: 1; /* Faz a área da imagem ocupar o espaço restante */
+  background-color: #ddd; /* Placeholder para as imagens */
+  border-radius: 5px;
+  /* Estilos específicos para cada card (cores de fundo aproximadas) */
+}
+
+/* Card 1: Bottons a pronta entrega - Fundo cinza */
+.ready-delivery-card .card-image-area {
+  background-color: #d8d8d8;
+}
+
+/* Card 2: Bottons de conscientização - Fundo branco */
+.awareness-card .card-image-area {
+  background-color: #f7f7f7;
+}
+
+/* Card 3: Sua arte personalizada - Fundo verde claro */
+.custom-art-card .card-image-area {
+  background-color: #e5f5e5;
+}
+
+/* Media Query para responsividade (opcional, mas recomendado) */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .content-cards {
+    /* Muda para 1 coluna em telas menores */
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e Fonte Base */
+body {
+  font-family: sans-serif; /* Use a fonte real da imagem aqui */
+  background-color: #f7f7f7; /* Fundo levemente cinza */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+  width: 90%;
+
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------
+   1. SEÇÃO QUEM SOMOS NÓS
+   ------------------- */
+
+.main-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.history-content {
+  display: flex;
+  gap: 30px;
+}
+
+.logo-image {
+  /* Simulação da imagem do botton */
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  /* Adicione a imagem real como background-image ou use a tag <img> no HTML */
+}
+
+.text-area {
+  font-size: 0.9em;
+}
+
+.text-area p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.text-area strong {
+  font-weight: bold;
+}
+
+/* Estilo para o parágrafo final, ligeiramente destacado */
+.highlight-text {
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: 15px !important;
+}
+
+/* -------------------
+   2. SEÇÃO REDES SOCIAIS
+   ------------------- */
+
+.social-media-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.social-title {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.social-cards {
+  display: grid;
+  /* 3 colunas iguais */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.social-card {
+  display: block; /* Para que o link ocupe todo o espaço do card */
+  text-decoration: none;
+  background-color: #fff;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 180px; /* Garante altura mínima uniforme */
+}
+
+.social-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.social-card p {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Cores dos Ícones */
+.whatsapp-color {
+  background-color: #25d366; /* Verde do WhatsApp */
+}
+
+.instagram-color {
+  /* Simulação de gradiente ou cor destacada do Instagram */
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.shop-color {
+  background-color: #ee4d2d; /* Laranja da Shopee (ou similar) */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .history-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .social-cards {
+    /* Muda para 1 coluna em telas muito pequenas */
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Media Queries para responsividade da Página de Catálogo --- */
+
+/* Telas menores que 1024px (Tablets em modo paisagem) */
+@media (max-width: 1024px) {
+  .content-cards {
+    /* Muda de 3 para 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .hero-section {
+    padding: 30px;
+  }
+}
+
+/* Telas menores que 768px (Tablets e Celulares) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  /* Navegação Principal */
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px 10px; /* Reduz espaço entre os links */
+    margin-top: 10px;
+  }
+
+  /* Seção de Destaque (Hero) */
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-image {
+    width: 200px;
+    height: 120px;
+  }
+
+  /* Cards de Conteúdo */
+  .content-cards {
+    /* Volta para 1 coluna */
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
+
+/* Telas muito pequenas (Celulares) */
+@media (max-width: 480px) {
+  .main-nav a {
+    font-size: 0.8em;
+  }
+
+  .logo p {
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+  }
+}
+
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e Fonte Base */
+body {
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container principal (o mesmo estilo do "Quem Somos Nós") */
+.container {
+  width: 90%;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------
+   1. SEÇÃO DE CONTATO E FORMULÁRIO
+   ------------------- */
+
+.main-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px; /* Um pequeno padding para não grudar nas bordas */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #66bb6a; /* Cor de destaque (verde) */
+  outline: none;
+}
+
+.submit-button {
+  background-color: #66bb6a; /* Cor verde de destaque */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #5cb860;
+}
+
+/* -------------------
+   2. SEÇÃO REDES SOCIAIS (Reutilizando estilos)
+   ------------------- */
+
+.social-media-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.social-title {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.social-card {
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 25px 15px; /* Ajuste para caber em 3 colunas */
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 180px;
+}
+
+.social-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Ícones e Cores */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+.whatsapp-color {
+  background-color: #25d366;
+}
+.instagram-color {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+.email-color {
+  background-color: #4a90e2;
+} /* Azul para o e-mail */
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 0;
+  }
+
+  .social-cards {
+    grid-template-columns: 1fr; /* 1 coluna em telas menores */
+  }
+}

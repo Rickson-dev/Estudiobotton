@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Estúdio Bottons</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   <header class="top-bar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" height="90" width="90">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html"><span class="icon">🏠</span>Inicio</a></li>
+                    <li><a href="./contato.html"><span class="icon">✉️</span> Contato</a></li>
+                    <li><a href="./sobre.html"><span class="icon">👥</span> Quem Somos</a></li>
+                    <li><a href="#"><span class="icon">🛒</span> Carrinho</a></li>
+                    <li><a href="#"><span class="icon">📦</span> Pedidos</a></li>
+                    <li><a href="#"><a href="#"><span class="icon">⭐</span> Avaliações</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <main class="container">
+      <section class="contact-section">
+        <h1 class="main-title">Fale Conosco!</h1>
+        <p class="subtitle">Envie sua mensagem ou solicite um orçamento.</p>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Seu Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <section class="social-media-section">
+        <h2 class="social-title">Prefere outro canal de atendimento?</h2>
+
+        <div class="social-cards">
+          <a href="#" class="social-card">
+            <h3>WhatsApp</h3>
+            <p>Entre em contato e faça seus orçamentos.</p>
+            <div class="icon-circle whatsapp-color">
+              <span class="icon">💬</span>
+            </div>
+          </a>
+
+          <a href="#" class="social-card">
+            <h3>Instagram</h3>
+            <p>Nos acompanhe em nosso Instagram</p>
+            <div class="icon-circle instagram-color">
+              <span class="icon">📸</span>
+            </div>
+          </a>
+
+          <a href="#" class="social-card">
+            <h3>Atendimento por Email</h3>
+            <p>Mande um email direto para nossa equipe.</p>
+            <div class="icon-circle email-color">
+              <span class="icon">✉️</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
