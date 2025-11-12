@@ -1,0 +1,18 @@
+Este componente deve englobar toda a barra superior
+
+<header class="barra-superior">
+        <div class="container conteudo-nav">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" height="90" width="90">
+            </div>
+            <nav class="navegacao-principal">
+                <ul>
+                    <li><a href="./index.html"><span class="icon">🏠</span>Inicio</a></li>
+                    <li><a href="./contato.html"><span class="icon">✉️</span> Contato</a></li>
+                    <li><a href="./sobre.html"><span class="icon">👥</span> Quem Somos</a></li>
+                    <li><a href="./bottons.html"><span class="icon">🛒</span>Bottons</a></li>
+                    <li><a href="#"><span class="icon">📦</span> Carrinho</a></li>
+                                    </ul>
+            </nav>
+        </div>
+</header>

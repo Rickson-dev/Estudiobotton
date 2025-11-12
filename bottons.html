@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprar Botton Personalizado - Estúdio Bottons</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="barra-superior">
+      <div class="container conteudo-nav">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" height="90" width="90" />
+        </div>
+        <nav class="navegacao-principal">
+          <ul>
+            <li>
+              <a href="./index.html"><span class="icon">🏠</span>Inicio</a>
+            </li>
+            <li>
+              <a href="./contato.html"><span class="icon">✉️</span> Contato</a>
+            </li>
+            <li>
+              <a href="./sobre.html"><span class="icon">👥</span> Quem Somos</a>
+            </li>
+            <li>
+              <a href="./bottons.html"><span class="icon">🛒</span>Bottons</a>
+            </li>
+            <li>
+              <a href="#"><span class="icon">📦</span> Carrinho</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container pagina-produto">
+      <section class="detalhe-produto">
+        <div class="visuais-produto">
+          <div class="imagem-principal">
+            <img
+              src="./img/bottonssuaarte.webp"
+              alt="Botton Personalizado 35mm"
+            />
+          </div>
+          <div class="galeria-miniaturas">
+            <div class="miniatura ativa"></div>
+            <div class="miniatura"></div>
+            <div class="miniatura"></div>
+          </div>
+        </div>
+
+        <div class="opcoes-compra">
+          <h1 class="titulo-produto">Botton Personalizado (Sua Arte)</h1>
+
+          <div class="info-preco">
+            <p class="tag-preco">R$ 4,99</p>
+            <p class="info-desconto">
+              Desconto progressivo em maiores quantidades!
+            </p>
+          </div>
+
+          <form class="formulario-compra">
+            <div class="grupo-opcao">
+              <label for="tamanho-select">Tamanho:</label>
+              <select name="tamanho" id="tamanho-select" required>
+                <option value="">Selecione o Tamanho</option>
+                <option value="25mm">25 mm</option>
+                <option value="35mm" selected>35 mm (Padrão)</option>
+                <option value="45mm">45 mm</option>
+              </select>
+            </div>
+
+            <div class="grupo-opcao">
+              <label>Tipo de Fecho:</label>
+              <div class="opcoes-radio">
+                <label
+                  ><input type="radio" name="fecho" value="alfinete" checked />
+                  Alfinete</label
+                >
+                <label
+                  ><input type="radio" name="fecho" value="imã" /> Ímã</label
+                >
+                <label
+                  ><input type="radio" name="fecho" value="chaveiro" /> Chaveiro
+                  (+ R$ 1,50)</label
+                >
+              </div>
+            </div>
+
+            <div class="grupo-opcao grupo-upload">
+              <label for="upload-arte">Upload da sua Arte:</label>
+              <input
+                type="file"
+                id="upload-arte"
+                name="upload-arte"
+                accept="image/*"
+                required
+              />
+              <p class="dica-upload">
+                Aceitamos PNG, JPG e PDF (alta resolução).
+              </p>
+            </div>
+
+            <div class="grupo-acao">
+              <div class="controle-quantidade">
+                <label for="quantidade-input">Quantidade:</label>
+                <input
+                  type="number"
+                  id="quantidade-input"
+                  name="quantidade"
+                  value="1"
+                  min="1"
+                  required
+                />
+              </div>
+              <button type="submit" class="botao-adicionar">
+                <span class="icone">🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="especificacoes-produto">
+        <h2>Especificações e Prazos</h2>
+        <div class="grid-especs">
+          <div class="item-espec">
+            <p>Prazo de Produção:</p>
+            <strong>3 a 5 dias úteis</strong>
+          </div>
+          <div class="item-espec">
+            <p>Material:</p>
+            <strong>Metal, filme de poliéster e impressão HQ</strong>
+          </div>
+          <div class="item-espec">
+            <p>Entrega:</p>
+            <strong>Calcule o frete no carrinho.</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
