@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Completo de Bottons - Estúdio Bottons</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="barra-superior">
+      <div class="container conteudo-nav">
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo" height="90" width="90" />
+        </div>
+        <nav class="navegacao-principal">
+          <ul>
+            <li>
+              <a href="./index.html"><span class="icon">🏠</span>Inicio</a>
+            </li>
+            <li>
+              <a href="./contato.html"><span class="icon">✉️</span> Contato</a>
+            </li>
+            <li>
+              <a href="./sobre.html"><span class="icon">👥</span> Quem Somos</a>
+            </li>
+            <li>
+              <a href="./catalogo.html"><span class="icon">🏷️</span>Catálogo</a>
+            </li>
+            <li>
+              <a href="./bottons.html"
+                ><span class="icon">📦</span>Personalizados</a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="icon">🛒</span> Carrinho</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container pagina-catalogo">
+      <div class="layout-catalogo">
+        <aside class="menu-lateral-filtros">
+          <h2>🔍 Filtrar por:</h2>
+
+          <div class="grupo-filtro">
+            <h3>Categorias</h3>
+            <ul class="lista-categorias">
+              <li><a href="#" class="link-ativo">Todos os Bottons</a></li>
+              <li><a href="#">Temas Geek/Filmes</a></li>
+              <li><a href="#">Conscientização</a></li>
+              <li><a href="#">Memes e Frases</a></li>
+              <li><a href="#">Arte Personalizada</a></li>
+            </ul>
+          </div>
+
+          <div class="grupo-filtro">
+            <h3>Tamanhos</h3>
+            <div class="opcoes-checkbox">
+              <label
+                ><input type="checkbox" name="tamanho" value="25mm" /> 25
+                mm</label
+              >
+              <label
+                ><input type="checkbox" name="tamanho" value="35mm" checked />
+                35 mm</label
+              >
+              <label
+                ><input type="checkbox" name="tamanho" value="45mm" /> 45
+                mm</label
+              >
+            </div>
+          </div>
+
+          <div class="grupo-filtro">
+            <h3>Faixa de Preço</h3>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              value="10"
+              class="slider-preco"
+            />
+            <p class="valor-range">Até R$ 10,00</p>
+          </div>
+
+          <button class="botao-aplicar-filtro">Aplicar Filtros</button>
+        </aside>
+
+        <section class="lista-produtos">
+          <div class="barra-ordenacao">
+            <p>Exibindo 3 de 45 resultados</p>
+            <select class="select-ordenacao">
+              <option value="mais-vendidos">Mais Vendidos</option>
+              <option value="menor-preco">Menor Preço</option>
+              <option value="maior-preco">Maior Preço</option>
+              <option value="lancamento">Lançamentos</option>
+            </select>
+          </div>
+
+          <div class="grid-produtos">
+            <div class="card-produto-catalogo">
+              <a href="venda-botton.html">
+                <div class="imagem-produto-catalogo">
+                  <img src="./img/r2d2.png" alt="Botton r2d2" />
+                </div>
+                <div class="info-produto-catalogo">
+                  <h3>Botton: Tema Geek "R2D2"</h3>
+                  <p class="preco-catalogo">R$ 5,50</p>
+                  <a href="#"
+                    ><button class="botao-ver-detalhes">Ver Detalhes</button></a
+                  >
+                </div>
+              </a>
+            </div>
+
+            <div class="card-produto-catalogo">
+              <a href="venda-botton.html">
+                <div class="imagem-produto-catalogo">
+                  <img src="./img/demonslayer.png" alt="Botton Demon Slayer" />
+                </div>
+                <div class="info-produto-catalogo">
+                  <h3>Botton: Tema Geek "Demon Slayer"</h3>
+                  <p class="preco-catalogo">R$ 5,50</p>
+                  <a href="#"
+                    ><button class="botao-ver-detalhes">Ver Detalhes</button></a
+                  >
+                </div>
+              </a>
+            </div>
+
+            <div class="card-produto-catalogo">
+              <a href="venda-botton.html">
+                <div class="imagem-produto-catalogo">
+                  <img src="./img/meme.png" alt="Botton meme" />
+                </div>
+                <div class="info-produto-catalogo">
+                  <h3>Botton: Tema meme</h3>
+                  <p class="preco-catalogo">R$ 5,50</p>
+                  <a href="#"
+                    ><button class="botao-ver-detalhes">Ver Detalhes</button></a
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="paginacao">
+            <a href="#" class="pagina-anterior">Anterior</a>
+            <a href="#" class="numero-pagina ativo">1</a>
+            <a href="#" class="numero-pagina">2</a>
+            <a href="#" class="numero-pagina">3</a>
+            <a href="#" class="pagina-proxima">Próxima</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
